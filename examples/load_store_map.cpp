@@ -141,7 +141,9 @@ static IntMap load_store_map(MapType map_type)
             type = op0;
             break;
           case MAP_LONG:
-            value >>= 16;
+            // Use the signed extended upper half to match the sign extension
+            // performed by the ld16s instruction.
+            value = (int16_t)(value >> 16);
             type = instr.longType;
             break;
           }
