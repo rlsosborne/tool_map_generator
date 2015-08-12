@@ -16,9 +16,9 @@ namespace {
     LDW = 0x09,
     LDWI = 0x01,
     STWI = 0x00,
-    ST8 = 0x119,
-    ST16 = 0x109,
-    STW = 0x009
+    ST8 = 0x11c,
+    ST16 = 0x10c,
+    STW = 0x00c
   };
 
   enum Encoding {
